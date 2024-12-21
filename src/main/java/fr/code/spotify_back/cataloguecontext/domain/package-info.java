@@ -1,0 +1,1 @@
+package fr.code.spotify_back.cataloguecontext.domain;
