@@ -9,8 +9,11 @@ import io.github.cdimascio.dotenv.Dotenv;
 @SpringBootApplication
 public class SpotifyBackApplication {
 
+	 @Value("${AUTH0_CLIENT_ID}")
+     private static String auth0ClientId;
+	 
 	public static void main(String[] args) {
-        
+        System.out.print("authclient "+ auth0ClientId+ "------");
 		SpringApplication.run(SpotifyBackApplication.class, args);
 	}
 

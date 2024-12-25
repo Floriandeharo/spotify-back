@@ -29,7 +29,7 @@ public class SongContent implements Serializable{
 	private byte[] file;
 	
 	@Column(name = "file_content_type")
-	private String fileContenType;
+	private String fileContentType;
 
 	public Long getSongId() {
 		return songId;
@@ -55,12 +55,12 @@ public class SongContent implements Serializable{
 		this.file = file;
 	}
 
-	public String getFileContenType() {
-		return fileContenType;
+	public String getFileContentType() {
+		return fileContentType;
 	}
 
-	public void setFileContenType(String fileContenType) {
-		this.fileContenType = fileContenType;
+	public void setFileContentType(String fileContentType) {
+		this.fileContentType = fileContentType;
 	}
 	
 	

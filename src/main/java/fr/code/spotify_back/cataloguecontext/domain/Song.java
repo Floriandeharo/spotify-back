@@ -10,6 +10,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
@@ -35,8 +36,9 @@ public class Song implements Serializable{
 	private String author; 
 	
 
+	@Lob
 	@Column(name = "cover", nullable = false)
-	private String cover; 
+	private byte[] cover; 
 	
 
 	@Column(name = "cover_content_type", nullable = false)
@@ -83,12 +85,12 @@ public class Song implements Serializable{
 	}
 
 
-	public String getCover() {
+	public  byte[]  getCover() {
 		return cover;
 	}
 
 
-	public void setCover(String cover) {
+	public void setCover(byte[]  cover) {
 		this.cover = cover;
 	}
 
