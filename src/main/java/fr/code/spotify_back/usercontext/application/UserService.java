@@ -85,4 +85,13 @@ public class UserService {
         }
         return user;
     }
+    
+    public Optional<ReadUserDTO> getByEmail(String email){
+    	Optional<User> oneByEmail = userRepository.findOneByEmail(email);
+    	return oneByEmail.map(userMapper::readUserDTOToUser);
+    }
+	public boolean isAuthenticated() {
+		// TODO Auto-generated method stub
+		return !SecurityContextHolder.getContext().getAuthentication().getPrincipal().equals("anonymousUser");
+	}
 }
